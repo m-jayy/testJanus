@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="speech_bubble_user">#6ABE65</color>
+    <color name="green">#1fc600</color>
+    <color name="button_grey">#ACACAC</color>
+    <color name="white">#FFF</color>
+    <color name="black">#333333</color>
+    <color name="blacklyt">#444444</color>
+    <color name="Red">#f71a1f</color>
+    <color name="purple">#953cf6</color>
+    <color name="orange">#F48024</color>
+    <color name="background_color">#F9F9F9</color>
+    <color name="color_press_green">#40733D</color>
+    <color name="color_press_mahroon">#61031A</color>
+    <color name="default_background_color">#f6f5f5</color>
+</resources>

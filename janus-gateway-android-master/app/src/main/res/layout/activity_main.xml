@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainConstraint">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10"
+        android:id="@+id/glv10"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90"
+        android:id="@+id/glv90"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70"
+        android:id="@+id/glh70"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/llMain">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/Ll"
+            >
+
+
+
+<!--            <org.webrtc.SurfaceViewRenderer-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/local_video_view"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent" />-->
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <org.webrtc.SurfaceViewRenderer
+        android:translationZ="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_weight="1"
+        android:id="@+id/local_video_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingRight="38dp"
+        android:paddingLeft="38dp"
+        android:id="@+id/bottomPanel"
+        android:paddingTop="16dp"
+        android:background="@drawable/gradient_background_shade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".90"
+            android:id="@+id/glh90"
+            android:layout_height="wrap_content" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnHangUp"
+            android:layout_width="60dp"
+
+            android:layout_height="60dp"
+            android:src="@drawable/btncallhangup"
+            app:layout_constraintBottom_toTopOf="@+id/btnLoud"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnLoud"
+            android:layout_width="38dp"
+
+            android:layout_height="38dp"
+
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="6dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/audiocall_speaker_off_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/glh90"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnvideo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnvideo"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="6dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/video_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/glh90"
+            app:layout_constraintLeft_toRightOf="@+id/btnLoud"
+            app:layout_constraintRight_toLeftOf="@+id/btnSwitchCamera"
+           />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="6dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/switch_camera_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/glh90"
+            app:layout_constraintLeft_toRightOf="@+id/btnvideo"
+            app:layout_constraintRight_toLeftOf="@+id/btnMute"
+            />
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnMute"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:src="@drawable/audiocall_mic_on_icon"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="6dp"
+            android:background="@drawable/circle_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/glh90"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btnSwitchCamera"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
